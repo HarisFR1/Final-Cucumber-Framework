@@ -34,6 +34,7 @@ Feature: Retail Order Page
     And User click on Proceed to Checkout button
     And User click on Place Your Order
     Then a message should be displayed ‘Order Placed, Thanks’
+#    adding new item
     And User change the category to 'Electronics'
     And User search for an item 'Amazon Fire Tv'
     And User click on Search icon

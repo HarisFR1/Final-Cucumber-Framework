@@ -67,6 +67,7 @@ public class BaseSetup {
             case "edge":
                 browser = new EdgeBrowser();
                 webDriver = browser.openBrowser(url);
+                webDriver.manage().deleteAllCookies();
                 break;
             default:
                 throw new RuntimeException("Browser name in config file " +

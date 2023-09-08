@@ -58,7 +58,11 @@ public class BaseSetup {
                 webDriver = browser.openBrowser(url);
                 break;
             case "edge":
-                browser = new EdgeBrowser();
+                if ((boolean) uiProperties.get("headless")) {
+                    browser = new EdgeHeadless();
+                } else {
+                    browser = new EdgeBrowser();
+                }
                 webDriver = browser.openBrowser(url);
                 break;
             default:
